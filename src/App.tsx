@@ -1,12 +1,12 @@
-import './App.css'
-
-function App() {
-
+import { Canvas } from '@react-three/fiber';
+import Box from './components/box/box';
+import "./App.css";
+export default function App() {
   return (
-    <>
-      <h1> Cube </h1>
-    </>
-  )
+    <div className='boxContainer'>
+      <Canvas>
+        <Box />
+      </Canvas>
+    </div>
+  );
 }
-
-export default App
