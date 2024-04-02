@@ -1,15 +1,11 @@
-import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Glass } from "../glass/glass";
 
-const Box = () => {
+const Box = ({coordinates, scale, rotationZ}:{coordinates:any,scale:any,rotationZ:any}) => {
     return (
         <>
             <ambientLight intensity={1}/>
-            <OrbitControls/>
-            <ScrollControls pages={3} damping={0.25}>
-                <Glass />
-            </ScrollControls>
+            <Glass coordinates={coordinates} scale={scale} rotationZ={rotationZ}/>
         </>
     )
 }
-export default Box;
+export default Box;  
